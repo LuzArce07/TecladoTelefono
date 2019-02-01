@@ -157,10 +157,16 @@ namespace GraficadorSeñales
 
                 double frecuenciaFundamental = ((double)indiceMaximo * señal.FrecuenciaMuestreo) / (double)transformada.Muestras.Count;
 
-                double indiceMaximoFrecuencia = ((double)frecuenciaFundamental * (double)transformada.Muestras.Count) / señal.FrecuenciaMuestreo;
+                int indiceMin1 = (int)(600.00 * (double)transformada.Muestras.Count / señal.FrecuenciaMuestreo);
+                int indiceMax1 = (int)(1200.00 * (double)transformada.Muestras.Count / señal.FrecuenciaMuestreo);
+
+                int indiceMin2 = (int)(1000.00 * (double)transformada.Muestras.Count / señal.FrecuenciaMuestreo);
+                int indiceMax2 = (int)(1500.00 * (double)transformada.Muestras.Count / señal.FrecuenciaMuestreo);
+
+                
 
                 lblFrecuenciaFundamental.Text = frecuenciaFundamental.ToString() + " Hz";
-                lblIndiceMaximoFrecuencia.Text = indiceMaximoFrecuencia.ToString();
+                
 
             }
              
